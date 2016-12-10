@@ -1,7 +1,8 @@
 #coding:utf-8
 import pygame
 import sys
-import traceback from random import *
+import traceback 
+from random import *
 from pygame.locals import *
 
 #===========initialize============
