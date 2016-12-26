@@ -21,6 +21,7 @@ class MyPlane(pygame.sprite.Sprite):
 		self.rect.left,self.rect.top=(self.width-self.rect.width)//2,(self.height-self.rect.height-60)
 										#定义飞机初始化位置，底部预留60像素
 		self.speed=10
+		self.invincible=False	#飞机初始化有三秒无敌时间
 		self.destroy_images=[]		#加载飞机毁损图片
 		self.destroy_images.extend([pygame.image.load("image/hero_blowup_n1.png"),
 									pygame.image.load("image/hero_blowup_n2.png"),
@@ -51,3 +52,4 @@ class MyPlane(pygame.sprite.Sprite):
 	def reset(self):
 		self.rect.left,self.rect.top=(self.width-self.rect.width)//2,(self.height-self.rect.height-60)
 		self.active=True
+		self.invincible=True
